@@ -7,7 +7,7 @@
 			"action": "close"
 		},
 		{
-			"path": "tryit.py",
+			"path": "track.py",
 			"panel": 1,
 			"action": "open"
 		},
