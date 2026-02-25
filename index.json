@@ -1,0 +1,22 @@
+{
+	"theme": "light",
+	"scripts": [],
+	"lexikonTopic": "",
+	"suppressPageNumbering": true,
+	"useSubmitButtons": true,
+	"useMarkAsComplete": true,
+	"hideMenu": false,
+	"allowGuideClose": false,
+	"collapsedOnStart": false,
+	"hideSectionsToggle": false,
+	"hideBackToDashboard": false,
+	"protectLayout": false,
+	"title": "Keeping Track",
+	"order": [
+		"Get-Ready-4835",
+		"Try-It-Out-1adf",
+		"Change-It-f831",
+		"Create-Your-Own-87a3",
+		"Playtest-and-Reflect-2556"
+	]
+}
