@@ -4,55 +4,62 @@ import random
 WIDTH = 800
 HEIGHT = 600
 
+# TODO: Create a state variable to control which screen is shown
+# Hint: use "start", "playing", and "game_over" as your three states
+
 score = 0
 
 player = Actor('happy')
 player.pos = (WIDTH // 2, HEIGHT // 2)
 
-alien = Actor('alien')
-alien.pos = (100, 100)
+# TODO: Create at least one enemy and one collectible using Actor()
 
-cookie = Actor('cookie')
-cookie.pos = (random.randint(50, WIDTH - 50), random.randint(50, HEIGHT - 50))
+
+def reset_game():
+    global score
+    score = 0
+    player.pos = (WIDTH // 2, HEIGHT // 2)
+    # TODO: Reset enemy and collectible positions too
+
 
 def update():
     global score
+    # TODO: Only run game logic when state is "playing"
 
+    # Player movement
     if keyboard.left:
-        player.x -= 4
+        player.x -= 5
     if keyboard.right:
-        player.x += 4
+        player.x += 5
     if keyboard.up:
-        player.y -= 4
+        player.y -= 5
     if keyboard.down:
-        player.y += 4
+        player.y += 5
 
-    # Keep player on screen
-    player.x = max(0, min(WIDTH, player.x))
-    player.y = max(0, min(HEIGHT, player.y))
+    # TODO: Add enemy movement
 
-    # Alien chases player
-    if alien.x < player.x:
-        alien.x += 1
-    elif alien.x > player.x:
-        alien.x -= 1
-    if alien.y < player.y:
-        alien.y += 1
-    elif alien.y > player.y:
-        alien.y -= 1
+    # TODO: Detect collectible pickup and update score
 
-    # Collect cookie
-    if player.colliderect(cookie):
-        score += 1
-        cookie.pos = (random.randint(50, WIDTH - 50), random.randint(50, HEIGHT - 50))
+    # TODO: Detect enemy collision and switch to game over state
 
-    # TODO: detect collision with alien and change state to "game_over"
 
 def draw():
     screen.fill((0, 0, 0))
+
+    # TODO: Draw different things depending on the current state
+    # "start" — show a title and "Press SPACE to begin"
+    # "playing" — draw player, enemies, collectibles, and the score
+    # "game_over" — show final score and "Press R to restart"
+
     player.draw()
-    alien.draw()
-    cookie.draw()
-    screen.draw.text(f"Score: {score}", (10, 10), fontsize=24, color="white")
+    screen.draw.text(f"Score: {score}", (10, 10), fontsize=30, color="white")
+
+
+def on_key_down(key):
+    pass
+    # TODO: Handle keypresses to change between states
+    # SPACE on start screen -> playing
+    # R on game over screen -> start
+
 
 pgzrun.go()
