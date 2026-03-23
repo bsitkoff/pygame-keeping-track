@@ -1,0 +1,40 @@
+{
+	"type": "free-text-auto",
+	"taskId": "free-text-auto-2767628015",
+	"source": {
+		"name": "global-reflection",
+		"showName": false,
+		"instructions": "Explain why the global keyword is needed when a function changes a variable. Use an example from your game.",
+		"command": "python3 .guides/secure/freetext.py --question \"Explain why the global keyword is needed when a function changes a variable. Use an example from your game.\" --use-llm",
+		"timeoutSeconds": 40,
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Free Text Autograde"
+				}
+			],
+			"files": [
+				"tryit.py"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 1,
+					"content": "tryit.py"
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"arePartialPointsAllowed": false,
+		"previewType": "NONE",
+		"points": 1,
+		"useMaximumScore": false
+	}
+}

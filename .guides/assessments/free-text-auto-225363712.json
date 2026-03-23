@@ -1,0 +1,45 @@
+{
+	"type": "free-text-auto",
+	"taskId": "free-text-auto-225363712",
+	"source": {
+		"name": "state-variable",
+		"showName": false,
+		"instructions": "How does the state variable control what happens in this game? Describe all three states.",
+		"command": "python3 .guides/secure/freetext.py --question \"How does the state variable control what happens in this game? Describe all three states.\" --use-llm",
+		"timeoutSeconds": 40,
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Free Text Autograde"
+				}
+			],
+			"files": [
+				"track.py"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 1,
+					"content": "track.py"
+				},
+				{
+					"type": "terminal",
+					"panelNumber": 2,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"arePartialPointsAllowed": false,
+		"previewType": "NONE",
+		"points": 1,
+		"useMaximumScore": false
+	}
+}

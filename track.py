@@ -4,72 +4,73 @@ import random
 WIDTH = 800
 HEIGHT = 600
 
-# state controls which screen is shown — "start", "playing", or "game_over"
+# These variables control the whole game
 state = "start"
 score = 0
 
 player = Actor('happy')
+player.pos = (WIDTH // 2, HEIGHT // 2)
+
 alien = Actor('alien')
+alien.pos = (100, 100)
+
 cookie = Actor('cookie')
-
-
-def reset_game():
-    global score
-    score = 0
-    player.pos = (WIDTH // 2, HEIGHT // 2)
-    alien.pos = (100, 100)
-    cookie.pos = (300, 300)
+cookie.pos = (300, 300)
 
 
 def update():
     global state, score
 
-    # Only run game logic when actually playing
-    if state != "playing":
-        return
+    if state == "start":
+        if keyboard.space:
+            # Reset everything and start playing
+            score = 0
+            player.pos = (WIDTH // 2, HEIGHT // 2)
+            alien.pos = (100, 100)
+            cookie.pos = (300, 300)
+            state = "playing"
 
-    # Player movement
-    if keyboard.left:
-        player.x -= 5
-    if keyboard.right:
-        player.x += 5
-    if keyboard.up:
-        player.y -= 5
-    if keyboard.down:
-        player.y += 5
+    elif state == "playing":
+        # Player movement
+        if keyboard.left:
+            player.x -= 5
+        if keyboard.right:
+            player.x += 5
+        if keyboard.up:
+            player.y -= 5
+        if keyboard.down:
+            player.y += 5
 
-    # Wrap around screen
-    if player.x > WIDTH:
-        player.x = 0
-    if player.x < 0:
-        player.x = WIDTH
-    if player.y > HEIGHT:
-        player.y = 0
-    if player.y < 0:
-        player.y = HEIGHT
+        # Keep player on screen
+        player.x = max(0, min(WIDTH, player.x))
+        player.y = max(0, min(HEIGHT, player.y))
 
-    # Alien chases player
-    if player.x > alien.x:
-        alien.x += 1
-    elif player.x < alien.x:
-        alien.x -= 1
-    if player.y > alien.y:
-        alien.y += 1
-    elif player.y < alien.y:
-        alien.y -= 1
+        # Alien chases player
+        if alien.x < player.x:
+            alien.x += 1
+        elif alien.x > player.x:
+            alien.x -= 1
+        if alien.y < player.y:
+            alien.y += 1
+        elif alien.y > player.y:
+            alien.y -= 1
 
-    # Collect cookie — score goes up, cookie moves
-    if player.colliderect(cookie):
-        score += 1
-        cookie.pos = (random.randint(0, WIDTH), random.randint(0, HEIGHT))
+        # Collect cookie — score goes up, cookie moves
+        if player.colliderect(cookie):
+            score += 1
+            cookie.pos = (random.randint(50, WIDTH - 50), random.randint(50, HEIGHT - 50))
 
-    # Caught by alien — game over
-    if player.colliderect(alien):
-        state = "game_over"
+        # Caught by alien — game over
+        if player.colliderect(alien):
+            state = "game_over"
+
+    elif state == "game_over":
+        if keyboard.r:
+            state = "start"
 
 
 def draw():
-    screen.fill((0, 0, 0))
+    screen.fill((30, 30, 30))
 
     if state == "start":
         screen.draw.text("DODGE AND COLLECT",
@@ -98,17 +99,6 @@ def draw():
         screen.draw.text("Press R to play again",
                          center=(WIDTH // 2, HEIGHT // 2 + 70),
                          fontsize=24, color="yellow")
-
-
-def on_key_down(key):
-    global state
-
-    if state == "start" and key == keys.SPACE:
-        reset_game()
-        state = "playing"
-
-    elif state == "game_over" and key == keys.R:
-        state = "start"
 
 
 pgzrun.go()

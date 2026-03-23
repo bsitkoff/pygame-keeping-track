@@ -13,7 +13,7 @@ Swap with a neighbor and play each other's complete games.
 
 The `global` keyword was probably the most confusing part of this lesson. In your own words, why do you need it?
 
-> *[TODO: insert free-text-auto assessment — "Explain why the global keyword is needed when a function changes a variable. Use an example from your game."]*
+{Check It!|assessment}(free-text-auto-2767628015)
 
 ---
 

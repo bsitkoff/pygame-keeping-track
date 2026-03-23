@@ -1,0 +1,78 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-4016486497",
+	"source": {
+		"name": "create-your-own-game",
+		"showName": false,
+		"instructions": "Check your code when you are finished.",
+		"metadata": {
+			"tags": [],
+			"files": [
+				"tryit.py"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 1,
+					"content": "tryit.py"
+				},
+				{
+					"type": "terminal",
+					"panelNumber": 2,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 5,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "1",
+				"title": "Start Screen",
+				"description": "The game has a start screen that displays a title or instructions and waits for a keypress (e.g. SPACE) before the game begins. The game does not start automatically.",
+				"points": 1
+			},
+			{
+				"id": "2",
+				"title": "Playing State with Actors",
+				"description": "The playing state includes a moving player controlled by keyboard input, at least one enemy, and at least one collectible item. All are drawn on screen during gameplay.",
+				"points": 1
+			},
+			{
+				"id": "3",
+				"title": "Score Tracking and Display",
+				"description": "A score variable is tracked and increases when the player collects items. The current score is displayed on screen during gameplay using screen.draw.text().",
+				"points": 1
+			},
+			{
+				"id": "4",
+				"title": "Game Over Screen",
+				"description": "The game transitions to a game over state (e.g. when hitting an enemy). The game over screen displays the final score and provides instructions to restart (e.g. Press R).",
+				"points": 1
+			},
+			{
+				"id": "5",
+				"title": "State Variable and Global Keyword",
+				"description": "A state variable controls which screen is shown. The global keyword is used correctly in functions that change state or score. Different code runs in update() and draw() depending on the current state.",
+				"points": 1
+			}
+		],
+		"rubricsRequirements": "",
+		"solutions": [
+			{
+				"path": ".guides/secure/solution.py",
+				"content": ""
+			}
+		],
+		"showExpectedAnswerOption": {
+			"type": "Never"
+		}
+	}
+}

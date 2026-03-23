@@ -1,0 +1,32 @@
+{
+	"type": "free-text-auto",
+	"taskId": "free-text-auto-764560074",
+	"source": {
+		"name": "prediction-global",
+		"showName": false,
+		"instructions": "What do you think happens when this code runs? Will it work? Why or why not?",
+		"command": "python3 .guides/secure/freetext.py --question \"What do you think happens when this code runs? Will it work? Why or why not?\" --use-llm",
+		"timeoutSeconds": 40,
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Free Text Autograde"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"arePartialPointsAllowed": false,
+		"previewType": "NONE",
+		"points": 1,
+		"useMaximumScore": false
+	}
+}

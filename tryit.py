@@ -15,16 +15,12 @@ player.pos = (WIDTH // 2, HEIGHT // 2)
 # TODO: Create at least one enemy and one collectible using Actor()
 
 
-def reset_game():
-    global score
-    score = 0
-    player.pos = (WIDTH // 2, HEIGHT // 2)
-    # TODO: Reset enemy and collectible positions too
-
-
 def update():
     global score
-    # TODO: Only run game logic when state is "playing"
+    # TODO: Check the state variable to decide what should happen
+    # "start" — wait for SPACE, then reset positions and switch to "playing"
+    # "playing" — all the game logic below
+    # "game_over" — wait for R, then switch back to "start"
 
     # Player movement
     if keyboard.left:
@@ -44,7 +40,7 @@ def update():
 
 
 def draw():
-    screen.fill((0, 0, 0))
+    screen.fill((30, 30, 30))
 
     # TODO: Draw different things depending on the current state
     # "start" — show a title and "Press SPACE to begin"
@@ -53,13 +49,6 @@ def draw():
 
     player.draw()
     screen.draw.text(f"Score: {score}", (10, 10), fontsize=30, color="white")
-
-
-def on_key_down(key):
-    pass
-    # TODO: Handle keypresses to change between states
-    # SPACE on start screen -> playing
-    # R on game over screen -> start
 
 
 pgzrun.go()

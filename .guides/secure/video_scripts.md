@@ -102,18 +102,22 @@ Demo files are in `.guides/secure/video_demos/`.
 
 > "Here it is: `state = "start"`. This string variable is the brain of the whole game. It's always one of three values: `"start"`, `"playing"`, or `"game_over"`."
 
-**[Scroll to `update()`. Highlight the `if state != "playing": return` check.]**
+**[Scroll to `update()`. Highlight the `if state == "start"` block.]**
 
-> "In `update()`, the very first thing we check is: are we playing? If not, `return` — do nothing. That means the player can't move on the start screen or the game over screen. All the movement code, the alien chasing, the collision detection — it only runs when `state` is `"playing"`."
+> "In `update()`, everything is organized by state. The first block checks: are we on the start screen? If so, the only thing we do is wait for Space. When the player presses it, we reset the positions, set the score to zero, and change state to `"playing"`."
+
+**[Highlight the `elif state == "playing"` block.]**
+
+> "The playing block is where all the action happens — player movement, alien chasing, collecting cookies, checking for collisions. None of this runs on the start screen or game over screen because it's inside `elif state == "playing"`. And at the bottom, if the alien catches you, we set state to `"game_over"`."
+
+**[Highlight the `elif state == "game_over"` block.]**
+
+> "And the game over block just waits for R to go back to start. Notice we need `global state, score` at the top of `update()` because we're changing both of those variables."
 
 **[Scroll to `draw()`. Highlight the three `if/elif` blocks.]**
 
-> "In `draw()`, we have three blocks. If `state` is `"start"`, we draw the title and instructions. If it's `"playing"`, we draw the player, alien, cookie, and score. If it's `"game_over"`, we draw the final score and restart message. Only one of these runs at a time — whichever state we're in."
-
-**[Scroll to `on_key_down()`.]**
-
-> "And `on_key_down()` is where we actually *change* the state. Space on the start screen sets state to `"playing"` and calls `reset_game()`. R on the game over screen sets it back to `"start"`. Notice we need `global state` because we're changing it."
+> "In `draw()`, same pattern — three blocks. Start screen draws the title. Playing draws the actors and score. Game over draws the final score. Only one runs at a time."
 
 **[Go back to the full file view.]**
 
-> "So the pattern is: one variable at the top, check it in `update()` and `draw()`, change it in `on_key_down()`. That's it. When you build your own game in `tryit.py`, you'll follow this same pattern. Start with the state variable, then fill in what each state looks like and does."
+> "So the pattern is: one variable at the top, check it in `update()` and `draw()`. That's it — just two functions, same as last lesson. When you build your own game in `tryit.py`, you'll follow this same pattern. Start with the state variable, then fill in what each state does and looks like."
