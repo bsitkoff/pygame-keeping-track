@@ -24,6 +24,4 @@ Now look at the code. Find the `state` variable and trace how it gets checked in
   allowfullscreen
 ></iframe>
 
-**How does the `state` variable control what happens in this game?** Describe what each of the three states does.
-
 {Check It!|assessment}(free-text-auto-225363712)
