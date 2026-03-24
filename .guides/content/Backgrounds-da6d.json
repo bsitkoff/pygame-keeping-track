@@ -1,0 +1,32 @@
+{
+	"id": "da6d0e1f-2b3a-4c5d-8e6f-7a8b9c0d1e2f",
+	"title": "Backgrounds",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
+			"path": "tryit.py",
+			"panel": 1,
+			"action": "open"
+		},
+		{
+			"path": "#terminal: ",
+			"panel": 1,
+			"action": "open"
+		},
+		{
+			"path": "#preview: https://{{domain3050}}/",
+			"panel": 0,
+			"action": "open"
+		}
+	],
+	"path": [],
+	"contentType": "markdown",
+	"type": "page",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": "",
+	"layout": "2-panels-tree-guides-left"
+}
