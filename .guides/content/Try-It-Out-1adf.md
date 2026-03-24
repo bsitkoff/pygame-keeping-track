@@ -9,7 +9,7 @@ This game has three **states**: a start screen, the game itself, and a game over
 - Where does the score display?
 - What triggers the game over?
 
-Now look at the code. Find the `state` variable and see how it gets checked in both `update()` and `draw()`.
+Now look at the code. Find the `state` variable and trace how it gets checked in both `update()` and `draw()`.
 
 ---
 
@@ -24,5 +24,6 @@ Now look at the code. Find the `state` variable and see how it gets checked in b
   allowfullscreen
 ></iframe>
 
+**How does the `state` variable control what happens in this game?** Describe what each of the three states does.
 
 {Check It!|assessment}(free-text-auto-225363712)

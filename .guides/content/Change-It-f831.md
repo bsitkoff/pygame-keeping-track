@@ -34,4 +34,6 @@ The start screen currently says "DODGE AND COLLECT". Change the text and styling
 
 What if the game ended when you reach 10 points instead of touching the alien? Try changing the losing condition or adding a winning condition.
 
+**What did you change?** Describe what your game does differently now.
+
 {Check It!|assessment}(free-text-auto-1209705660)

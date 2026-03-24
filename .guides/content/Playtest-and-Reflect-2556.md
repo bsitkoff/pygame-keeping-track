@@ -22,7 +22,7 @@ The `global` keyword was probably the most confusing part of this lesson. In you
 > 📹 [RIOT VIDEO: Episode 2 — Concept Art (from "So You Wanna Make Games??" playlist)]
 > *Embed from: https://www.youtube.com/playlist?list=PL42m9XiTqPHJdJuVXO6Vf5ta5D07peiVx*
 
-Your game has states, scores, and text — the communication layer. Concept artists think about how a game's visual identity helps players understand what's happening. Next lesson takes this idea further.
+Your game now has states, scores, and text on screen — that's the communication layer between your game and the player. Concept artists think about how a game's entire visual identity helps players understand what's happening. Next lesson, we'll take that idea further.
 
 ---
 

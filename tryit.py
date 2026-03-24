@@ -16,7 +16,7 @@ player.pos = (WIDTH // 2, HEIGHT // 2)
 
 
 def update():
-    global score
+    global score  # TODO: Add state here too once you create a state variable
     # TODO: Check the state variable to decide what should happen
     # "start" — wait for SPACE, then reset positions and switch to "playing"
     # "playing" — all the game logic below
