@@ -17,26 +17,22 @@ player.pos = (WIDTH // 2, HEIGHT // 2)
 
 def update():
     global score  # TODO: Add state here too once you create a state variable
-    # TODO: Check the state variable to decide what should happen
-    # "start" — wait for SPACE, then reset positions and switch to "playing"
-    # "playing" — all the game logic below
-    # "game_over" — wait for R, then switch back to "start"
 
-    # Player movement
-    if keyboard.left:
-        player.x -= 5
-    if keyboard.right:
-        player.x += 5
-    if keyboard.up:
-        player.y -= 5
-    if keyboard.down:
-        player.y += 5
+    # TODO: Use if/elif to check the state and run different code for each:
 
-    # TODO: Add enemy movement
+    # When state is "start":
+    #   Wait for SPACE, then reset positions and switch to "playing"
 
-    # TODO: Detect collectible pickup and update score
+    # When state is "playing":
+    #   Move the player
+    #   Move the enemy
+    #   Detect collectible pickup and update score
+    #   Detect enemy collision and switch to game over
 
-    # TODO: Detect enemy collision and switch to game over state
+    # When state is "game_over":
+    #   Wait for R, then switch back to "start"
+
+    pass  # Remove this line once you add your if/elif
 
 
 def draw():

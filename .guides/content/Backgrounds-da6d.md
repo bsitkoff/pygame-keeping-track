@@ -31,9 +31,9 @@ Your background image should be **800x600 px** to match your game window (`WIDTH
 
 ### Try it
 
-1. Find or create a background image (800x600 px)
-2. Save it as a `.png` in your `images/` folder
-3. Replace `screen.fill(...)` with `screen.blit('yourfilename', (0, 0))` in your `draw()` function
-4. Run your game with `python3 tryit.py`
-
-You can use **[Canva](https://www.canva.com/)** to create a simple background, or search for free game backgrounds online.
+1. Find a background image online — search for something like "free game background pixel art"
+2. Save it to your downloads folder
+3. Open **[Canva Image Resizer](https://www.canva.com/features/image-resizer/)**, upload your image, resize it to **800x600 px**, and download as PNG
+4. Upload the file to your `images/` folder in Codio
+5. Replace `screen.fill(...)` with `screen.blit('yourfilename', (0, 0))` in your `draw()` function
+6. Run your game with `python3 tryit.py`
