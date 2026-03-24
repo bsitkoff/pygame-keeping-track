@@ -17,4 +17,13 @@ The `global` keyword was probably the most confusing part of this lesson. In you
 
 ---
 
+**From code to concept:**
+
+> 📹 [RIOT VIDEO: Episode 2 — Concept Art (from "So You Wanna Make Games??" playlist)]
+> *Embed from: https://www.youtube.com/playlist?list=PL42m9XiTqPHJdJuVXO6Vf5ta5D07peiVx*
+
+Your game has states, scores, and text — the communication layer. Concept artists think about how a game's visual identity helps players understand what's happening. Next lesson takes this idea further.
+
+---
+
 Don't forget to turn this assignment in using the **Mark as Complete** button in the top right.

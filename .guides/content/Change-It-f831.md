@@ -1,7 +1,5 @@
 ## Change It
 
-Don't worry — you can't break anything permanently!
-
 > **Watch:** Displaying Text on Screen
 
 <iframe width="720" height="600"

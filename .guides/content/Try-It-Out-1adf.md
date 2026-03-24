@@ -1,6 +1,6 @@
 ## Try It Out
  
-Run `track.py` by typing `pgzrun track.py` in the terminal and pressing Enter.
+Run `track.py` by typing `python3 track.py` in the terminal and pressing Enter.
 
 This game has three **states**: a start screen, the game itself, and a game over screen. Play through the whole cycle.
 
@@ -23,6 +23,6 @@ Now look at the code. Find the `state` variable and see how it gets checked in b
   referrerpolicy="strict-origin-when-cross-origin"
   allowfullscreen
 ></iframe>
-  -
+
 
 {Check It!|assessment}(free-text-auto-225363712)
