@@ -1,6 +1,6 @@
 ## Playtest and Reflect
 
-Swap with a neighbor and play each other's complete games.
+Find someone else at roughly the same pace and play each other's complete games.
 
 **Give feedback on:**
 - Is it clear what to do on the start screen?

@@ -35,7 +35,8 @@ Build a game in `tryit.py` that:
 2. Has a **playing state** with a moving player, at least one enemy, and a collectible
 3. **Tracks and displays a score** while playing
 4. Has a **game over screen** that shows the score and lets you restart
-5. Uses **your own sprites**
+5. Uses a **state variable** with the `global` keyword to control which screen is shown
+6. Uses **your own sprites**
 
 {Check It!|assessment}(llm-based-auto-rubric-4016486497)
 
